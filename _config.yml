@@ -9,6 +9,7 @@ baseurl: ""                          # leave blank for user-site root
 # Theme
 theme: "minimal-mistakes-jekyll"  # use the latest version of the theme
 # Plugins (all work on GitHub Pages)
+remote_theme             : "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
