@@ -1,0 +1,46 @@
+1. Install Ruby + MSYS2 (for Jekyll)
+Go to https://rubyinstaller.org and download the Ruby+Devkit installer for the latest stable Ruby (e.g. Ruby 3.x).
+
+Run the installer, check “Run ‘ridk install’ to set up MSYS2,” and when prompted select all three options (MSYS2 base, MINGW dev toolchain, MSYS2 runtime).
+
+When it finishes, open a new “Start Menu → Ruby x64” terminal.
+
+2. Install Bundler & Jekyll
+In that Ruby terminal, run:
+
+powershell
+Copy
+Edit
+gem install --user-install bundler jekyll
+This puts the jekyll and bundle commands into your Ruby gems directory. Ensure that directory is on your PATH— the installer normally adds it for you. If not, add something like:
+
+python
+Copy
+Edit
+%USERPROFILE%\.gem\ruby\3.x.0\bin
+to your Windows PATH.
+
+3. Scaffold a new Jekyll site
+In your cloned repo folder, run:
+
+powershell
+Copy
+Edit
+cd C:\path\to\palasht75.github.io
+jekyll new . --force
+This populates the folder with a default Jekyll site (config, example posts, CSS, etc.).
+
+4. Preview locally
+Still in that folder, start the local server:
+
+powershell
+Copy
+Edit
+bundle exec jekyll serve --livereload
+Then open your browser to
+
+cpp
+Copy
+Edit
+http://127.0.0.1:4000/
+Any edits you make in the repo (Markdown, config, layouts, assets) will automatically rebuild and refresh in your browser.

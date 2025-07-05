@@ -1,0 +1,78 @@
+# =======================
+#  Global site settings
+# =======================
+title: "Portfolio"
+description: "Senior Software Engineer | AI & NLP in Healthcare"
+url: "https://palasht75.github.io"   # production URL
+baseurl: ""                          # leave blank for user-site root
+
+# Theme
+theme: "minimal-mistakes-jekyll"  # use the latest version of the theme
+# Plugins (all work on GitHub Pages)
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# -----------------------
+#  Author & social links
+# -----------------------
+author:
+  name: "Palash"
+  avatar: "/assets/images/avatar.jpg"        # add this file
+  bio: "Incoming M.Eng @ uOttawa • AI-driven healthcare engineer"
+  location: "Nagpur, Maharashtra, India"
+  email: "palasht75@gmail.com"
+
+social:
+  github:   "palasht75"
+  linkedin: "palasht75"
+  youtube:  "UCXXXXXXXX"          # ← replace or delete
+  email:    "palasht75@gmail.com"
+  rss:      true                  # enables /feed.xml
+
+# -----------------------
+#  Header navigation
+# -----------------------
+header_pages:
+  - about.md
+  - projects/index.md
+  - media/index.md
+  - contact.md
+
+# -----------------------
+#  Content collections
+# -----------------------
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  media:
+    output: true
+    permalink: /media/:name/
+
+# -----------------------
+#  Pagination (if you add a blog)
+# -----------------------
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# -----------------------
+#  Default front-matter
+# -----------------------
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+  - scope:
+      path: ""
+      type: "media"
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
