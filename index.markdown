@@ -70,7 +70,7 @@ excerpt: >
 
 <!-- ================== PROJECT / MEDIA / CONTACT CARDS ================== -->
 <section class="card-grid">
-  <a class="card" href="/projects/project.md">
+  <a class="card" href="/projects/">
     <img src="/assets/images/projects.png" alt="Projects">
     <div class="card-body">
       <h3>Projects</h3>

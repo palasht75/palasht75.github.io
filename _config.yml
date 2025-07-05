@@ -4,15 +4,16 @@
 title: "Portfolio"
 description: "Senior Software Engineer | AI & NLP in Healthcare"
 url: "https://palasht75.github.io"   # production URL
-baseurl: ""                          # leave blank for user-site root
+baseurl: ""                          # user-site root
 
-# Theme
-# theme: "minimal-mistakes-jekyll"  # use the latest version of the theme
-# Plugins (all work on GitHub Pages)
-remote_theme: "mmistakes/minimal-mistakes"
+# Theme (GitHub Pages remote copy of Minimal-Mistakes)
+# remote_theme: "mmistakes/minimal-mistakes"
+theme: "minimal-mistakes-jekyll"
+
+# Plugins (all are whitelisted for GitHub Pages)
 plugins:
   - jekyll-remote-theme
-  - jekyll-include-cache      # ← added this
+  - jekyll-include-cache
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -22,7 +23,7 @@ plugins:
 # -----------------------
 author:
   name: "Palash"
-  avatar: "/assets/images/avatar.jpg"        # add this file
+  avatar: "/assets/images/avatar.jpg"
   bio: "Incoming M.Eng @ uOttawa • AI-driven healthcare engineer"
   location: "Nagpur, Maharashtra, India"
   email: "palasht75@gmail.com"
@@ -30,9 +31,8 @@ author:
 social:
   github:   "palasht75"
   linkedin: "palasht75"
-  youtube:  "UCXXXXXXXX"          # ← replace or delete
   email:    "palasht75@gmail.com"
-  rss:      true                  # enables /feed.xml
+  rss:      true
 
 # -----------------------
 #  Header navigation
@@ -44,18 +44,7 @@ header_pages:
   - contact.md
 
 # -----------------------
-#  Content collections
-# -----------------------
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
-  media:
-    output: true
-    permalink: /media/:name/
-
-# -----------------------
-#  Pagination (if you add a blog)
+#  Pagination (blog only)
 # -----------------------
 paginate: 5
 paginate_path: "/blog/page:num/"
@@ -65,16 +54,10 @@ paginate_path: "/blog/page:num/"
 # -----------------------
 defaults:
   - scope:
-      path: ""
-      type: "projects"
+      path: "projects"
     values:
       layout: single
-      author_profile: false
-      read_time: false
   - scope:
-      path: ""
-      type: "media"
+      path: "media"
     values:
       layout: single
-      author_profile: false
-      read_time: false
