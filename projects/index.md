@@ -1,82 +1,131 @@
 ---
-layout: single
-title: "Talks & Media"
+layout: splash
+title: "Projects"
 permalink: /projects/
 ---
 
 <style>
-.media-grid{
-  display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;
-  max-width:1200px;margin:2rem auto;padding:0 1rem;
+/* ===== PROJECT GRID ===== */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:2rem;
+  max-width:1200px;
+  margin:3rem auto 2.5rem;
+  padding:0 1rem;
 }
-.media-item{
-  flex:0 1 380px;
-  border-radius:10px;overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
-  transition:transform .25s,box-shadow .25s;
+
+/* ===== CARD ===== */
+.project-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 5px 14px rgba(0,0,0,.08);
+  transition:.25s transform,.25s box-shadow;
+  text-decoration:none;color:inherit;
 }
-.media-item:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.15);}
-.media-item iframe,
-.media-item img{width:100%;height:215px;object-fit:cover;}
-.media-caption{padding:.75rem 1rem;font-size:.95rem;text-align:center;}
+.project-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 24px rgba(0,0,0,.15);
+}
+.project-thumb{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  display:block;
+}
+.project-body{
+  padding:1.25rem 1.5rem;
+}
+.project-body h3{
+  margin:.25rem 0 .6rem;
+  font-size:1.3rem;
+  color:#002d5c;
+}
+.project-body p{
+  font-size:.95rem;
+  line-height:1.55;
+  color:#444;
+}
+.tech-tags{
+  margin-top:1rem;
+  display:flex;flex-wrap:wrap;gap:.4rem;
+}
+.tech-tags span{
+  padding:4px 8px;
+  font-size:.75rem;
+  background:#f0f4ff;
+  border-radius:4px;
+  color:#002d5c;
+  font-weight:600;
+}
 </style>
 
-<div class="media-grid">
+# Projects
 
-<!-- YouTube #1 -->
-<div class="media-item">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/YOUR_YT_ID_1?rel=0&modestbranding=1"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
-    allowfullscreen loading="lazy">
-  </iframe>
-  <div class="media-caption">
-    <strong>Demo&nbsp;▶</strong> Google Cloud Hackathon winning pitch
+A selection of open-source libraries, prototypes, and production systems I have authored or led.
+Click any card to view the repository or live demo.
+
+<div class="project-grid">
+
+<!-- ========== PROJECT 1 ========== -->
+<a class="project-card" href="https://github.com/palasht75/umls-python-client" target="_blank" rel="noopener">
+  <img class="project-thumb" src="/assets/images/proj-umls.jpg" alt="UMLS Python Client">
+  <div class="project-body">
+    <h3>UMLS Python Client</h3>
+    <p>Lightweight SDK that wraps the UMLS REST APIs, with async and retry support.
+       Published on PyPI and featured by the National Library of Medicine.</p>
+
+    <div class="tech-tags">
+      <span>Python</span><span>FastAPI</span><span>Healthcare</span>
+    </div>
   </div>
-</div>
+</a>
 
-<!-- YouTube #2 -->
-<div class="media-item">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/YOUR_YT_ID_2?rel=0&modestbranding=1"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
-    allowfullscreen loading="lazy">
-  </iframe>
-  <div class="media-caption">
-    <strong>Walk-through&nbsp;▶</strong> Finance Agent architecture deep-dive
+<!-- ========== PROJECT 2 ========== -->
+<a class="project-card" href="https://github.com/palasht75/llm-evidence-summarizer" target="_blank" rel="noopener">
+  <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LLM Evidence Summarizer">
+  <div class="project-body">
+    <h3>LLM Evidence Summarizer</h3>
+    <p>Compliance-grade summarization with transparent sentence-level evidence mapping.</p>
+
+    <div class="tech-tags">
+      <span>Python</span><span>OpenAI SDK</span><span>llama</span><span>GPT4o</span><span>Git CI/CD</span><span>Github Actions</span>
+    </div>
   </div>
-</div>
+</a>
 
-<!-- LinkedIn #1 -->
-<div class="media-item">
-  <a href="YOUR_LINKEDIN_URL_1" target="_blank" rel="noopener">
-    <img src="/assets/images/li-post-1.jpg" alt="LinkedIn post thumbnail">
-  </a>
-  <div class="media-caption">
-    <strong>LinkedIn:</strong> Behind the scenes of QuickBooks Finance Agent
+
+<!-- ========== PROJECT 3 ========== -->
+<a class="project-card" href="https://github.com/palasht75/llm-evidence-summarizer" target="_blank" rel="noopener">
+  <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LLM Evidence Summarizer">
+  <div class="project-body">
+    <h3>LLM Evidence Summarizer</h3>
+    <p>Compliance-grade summarization with transparent sentence-level evidence mapping.</p>
+
+    <div class="tech-tags">
+      <span>Python</span><span>OpenAI SDK</span><span>llama</span><span>GPT4o</span><span>Git CI/CD</span><span>Github Actions</span>
+    </div>
   </div>
-</div>
+</a>
 
-<!-- LinkedIn #2 -->
-<div class="media-item">
-  <a href="YOUR_LINKEDIN_URL_2" target="_blank" rel="noopener">
-    <img src="/assets/images/li-post-2.jpg" alt="LinkedIn post thumbnail">
-  </a>
-  <div class="media-caption">
-    <strong>LinkedIn:</strong> AI in Healthcare – podcast snippet
+<!-- ========== PROJECT 2 ========== -->
+<a class="project-card" href="https://github.com/palasht75/llm-evidence-summarizer" target="_blank" rel="noopener">
+  <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LLM Evidence Summarizer">
+  <div class="project-body">
+    <h3>LLM Evidence Summarizer</h3>
+    <p>Compliance-grade summarization with transparent sentence-level evidence mapping.</p>
+
+    <div class="tech-tags">
+      <span>Python</span><span>OpenAI SDK</span><span>llama</span><span>GPT4o</span><span>Git CI/CD</span><span>Github Actions</span>
+    </div>
   </div>
-</div>
-
-<!-- LinkedIn #3 -->
-<div class="media-item">
-  <a href="YOUR_LINKEDIN_URL_3" target="_blank" rel="noopener">
-    <img src="/assets/images/li-post-3.jpg" alt="LinkedIn post thumbnail">
-  </a>
-  <div class="media-caption">
-    <strong>LinkedIn:</strong> UMLS Python client launch &amp; demo
-  </div>
-</div>
+</a>
 
 </div>
+
+> **Add more:** copy a `<a class="project-card"> … </a>` block,
+> update the image, link, text, and tech tags.
+>
+> Thumbnails should be 1200×800 px (or similar 3:2 ratio) JPEG/PNG
+> stored in `/assets/images/`.

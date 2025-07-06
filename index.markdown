@@ -11,15 +11,16 @@ header:
   caption: "Turning ideas into high-impact software."
   actions:
     - label: "Download Résumé"
-      url: /assets/resume.pdf
+      url: /assets/Palash_Resume_24_25.pdf
       icon: "fas fa-file-alt"
     - label: "Email Me"
       url: "mailto:palasht75@gmail.com"
       icon: "fas fa-paper-plane"
 excerpt: >
-  Senior Software Engineer specialising in LLM engineering, backend development and
-  no-code/low-code agentic-AI solutions on the cloud. I create fast, resilient systems
-  that deliver real value.
+  Senior Software Engineer focused on cloud-native back-end development and 
+  applied AI projects. I build fast, resilient Python + AWS services and have 
+  delivered agentic-AI prototypes and LLM coursework projects that showcase my 
+  growing expertise in large-language-model pipelines.
 
 ---
 

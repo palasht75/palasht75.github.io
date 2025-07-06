@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: splash
 title: ""
 permalink: /media/
 ---
@@ -147,17 +147,6 @@ permalink: /media/
     <div class="media-col">
       <h2>LinkedIn Highlights</h2>
 
-      <div class="embed-card linkedin">
-        <iframe
-          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7030875756268318720?collapsed=1"
-          title="Google Cloud Hackathon recap"
-          frameborder="0" allowfullscreen loading="lazy">
-        </iframe>
-        <div class="caption">
-          <strong>Hackathon Recap</strong>
-          Winner of Google Cloud Hackathon – LinkedIn post
-        </div>
-      </div>
 
       <div class="embed-card linkedin">
         <iframe
@@ -170,6 +159,20 @@ permalink: /media/
           Recognition from Persistent Systems finals
         </div>
       </div>
+
+      <div class="embed-card linkedin">
+        <iframe
+          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7030875756268318720?collapsed=1"
+          title="Google Cloud Hackathon recap"
+          frameborder="0" allowfullscreen loading="lazy">
+        </iframe>
+        <div class="caption">
+          <strong>Hackathon Recap</strong>
+          Winner of Google Cloud Hackathon – LinkedIn post
+        </div>
+      </div>
+
+
 
       <div class="embed-card linkedin">
         <iframe
@@ -191,16 +194,16 @@ permalink: /media/
   
   <div class="paper-grid">
     <a class="paper-card" href="https://bbrc.in/wp-content/uploads/2021/03/13_14-SPL-Galley-proof-115.pdf" target="_blank" rel="noopener">
-      <img src="/assets/images/paper-traffic.png" alt="Traffic Sign paper thumbnail">
-      <div class="paper-body">
+      <img src="/assets/images/paper-traffic.png" alt="Traffic Sign paper thumbnail" style="height:300px;">
+      <div class="paper-body" style="min-height:110px;">
         <strong>Traffic-Sign Detection</strong>
         Best Paper – ICESC 2020
       </div>
     </a>
 
     <a class="paper-card" href="https://link.springer.com/chapter/10.1007/978-981-19-8865-3_41" target="_blank" rel="noopener">
-      <img src="/assets/images/paper-emotion.jpg" alt="Emotion Recognition paper thumbnail">
-      <div class="paper-body">
+      <img src="/assets/images/paper-emotion.jpg" alt="Emotion Recognition paper thumbnail" style="height:300px;">
+      <div class="paper-body" style="min-height:110px;">
         <strong>Emotion Recognition System</strong>
         Springer LNEE 992 – ICMEET 2023
       </div>
