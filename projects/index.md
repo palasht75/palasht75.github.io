@@ -96,7 +96,7 @@ Click any card to view the repository or live demo.
 </a>
 
 
-<!-- ========== PROJECT 3 ========== -->
+<!-- ========== PROJECT 3 ==========
 <a class="project-card" href="https://github.com/palasht75/llm-evidence-summarizer" target="_blank" rel="noopener">
   <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LLM Evidence Summarizer">
   <div class="project-body">
@@ -109,8 +109,8 @@ Click any card to view the repository or live demo.
   </div>
 </a>
 
-<!-- ========== PROJECT 2 ========== -->
-<a class="project-card" href="https://github.com/palasht75/llm-evidence-summarizer" target="_blank" rel="noopener">
+<!-- ========== PROJECT 4 ========== -->
+<!-- <a class="project-card" href="https://github.com/palasht75/llm-evidence-summarizer" target="_blank" rel="noopener">
   <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LLM Evidence Summarizer">
   <div class="project-body">
     <h3>LLM Evidence Summarizer</h3>
@@ -120,12 +120,12 @@ Click any card to view the repository or live demo.
       <span>Python</span><span>OpenAI SDK</span><span>llama</span><span>GPT4o</span><span>Git CI/CD</span><span>Github Actions</span>
     </div>
   </div>
-</a>
+</a> -->
 
 </div>
 
-> **Add more:** copy a `<a class="project-card"> … </a>` block,
+<!-- > **Add more:** copy a `<a class="project-card"> … </a>` block,
 > update the image, link, text, and tech tags.
 >
 > Thumbnails should be 1200×800 px (or similar 3:2 ratio) JPEG/PNG
-> stored in `/assets/images/`.
+> stored in `/assets/images/`. -->
