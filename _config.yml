@@ -7,8 +7,8 @@ url: "https://palasht75.github.io"   # production URL
 baseurl: ""                          # user-site root
 
 # Theme (GitHub Pages remote copy of Minimal-Mistakes)
-remote_theme: "mmistakes/minimal-mistakes"
-# theme: "minimal-mistakes-jekyll"
+# remote_theme: "mmistakes/minimal-mistakes"
+theme: "minimal-mistakes-jekyll"
 
 # Plugins (all are whitelisted for GitHub Pages)
 plugins:
