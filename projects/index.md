@@ -70,7 +70,7 @@ Click any card to view the repository or live demo.
 
 <!-- ========== PROJECT 1 ========== -->
 <a class="project-card" href="https://github.com/palasht75/umls-python-client" target="_blank" rel="noopener">
-  <img class="project-thumb" src="/assets/images/proj-umls.jpg" alt="UMLS Python Client">
+  <img class="project-thumb" src="/assets/images/proj-umls.png" alt="UMLS Python Client">
   <div class="project-body">
     <h3>UMLS Python Client</h3>
     <p>Lightweight SDK that wraps the UMLS REST APIs, with async and retry support.
@@ -84,7 +84,7 @@ Click any card to view the repository or live demo.
 
 <!-- ========== PROJECT 2 ========== -->
 <a class="project-card" href="https://github.com/palasht75/llm-evidence-summarizer" target="_blank" rel="noopener">
-  <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LLM Evidence Summarizer">
+  <img class="project-thumb" src="/assets/images/llm-summarization.png" alt="LLM Evidence Summarizer">
   <div class="project-body">
     <h3>LLM Evidence Summarizer</h3>
     <p>Compliance-grade summarization with transparent sentence-level evidence mapping.</p>

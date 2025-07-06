@@ -202,7 +202,7 @@ permalink: /media/
     </a>
 
     <a class="paper-card" href="https://link.springer.com/chapter/10.1007/978-981-19-8865-3_41" target="_blank" rel="noopener">
-      <img src="/assets/images/paper-emotion.jpg" alt="Emotion Recognition paper thumbnail" style="height:300px;">
+      <img src="/assets/images/emotion-recog.png" alt="Emotion Recognition paper thumbnail" style="height:300px;">
       <div class="paper-body" style="min-height:110px;">
         <strong>Emotion Recognition System</strong>
         Springer LNEE 992 – ICMEET 2023
