@@ -662,7 +662,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- ================== EASTER EGG TRIGGER & PANEL ================== -->
 <!-- Floating “?” Trigger -->
-<div id="egg" role="button" aria-label="Surprise me!" title="Click for a surprise!">?</div>
+<!-- <div id="egg" role="button" aria-label="Surprise me!" title="Click for a surprise!">?</div> -->
 
 <!-- Sliding Side-Panel
 <aside id="easterPanel" aria-hidden="true">
