@@ -560,7 +560,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="/assets/images/avatar.jpg" alt="Palash Thakur – LinkedIn">
       </a>
       <div class="avatar-contact">
-        <a href="https://linkedin.com/in/palasht75" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.linkedin.com/in/palash-thakur-8b5a34193/" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="mailto:palasht75@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> palasht75@gmail.com</a>
       </div>
     </div>
