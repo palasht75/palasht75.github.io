@@ -34,6 +34,8 @@ excerpt: >
 }
 body {
   margin: 0;
+  /* start with the same gradient as your first panel */
+  background: var(--grad1);
   transition: background 1s ease;
 }
 
@@ -496,6 +498,14 @@ document.addEventListener('DOMContentLoaded', () => {
     highlights: 'var(--grad4)',
     cta:        'var(--grad5)'
   };
+
+  const firstPanel = document.querySelector('.panel[data-section="about"]');
+  if (firstPanel) {
+    firstPanel.__grad = grades['about'];
+    document.body.style.background = firstPanel.__grad;
+    firstPanel.classList.add('active');
+  }
+  
   document.querySelectorAll('.panel').forEach(panel => {
     const sec = panel.dataset.section;
     panel.__grad = grades[sec]||grades.about;
