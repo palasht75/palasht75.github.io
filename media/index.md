@@ -5,6 +5,11 @@ permalink: /media/
 ---
 
 <style>
+:root{--grad1:#e3f2fd;}/* same colour */
+body{background:var(--grad1);}
+</style>
+
+<style>
 /* ====== CONTAINER ====== */
 .media-block {
   max-width: 1200px;
@@ -162,17 +167,16 @@ permalink: /media/
 
       <div class="embed-card linkedin">
         <iframe
-          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7030875756268318720?collapsed=1"
+          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7028233620934844417?collapsed=1"
           title="Google Cloud Hackathon recap"
           frameborder="0" allowfullscreen loading="lazy">
         </iframe>
         <div class="caption">
-          <strong>Hackathon Recap</strong>
-          Winner of Google Cloud Hackathon – LinkedIn post
+          <strong>HumBanayenge Spotlight</strong>
+          Young-Developer keynote at Google Cloud APAC
+
         </div>
       </div>
-
-
 
       <div class="embed-card linkedin">
         <iframe
@@ -181,8 +185,8 @@ permalink: /media/
           frameborder="0" allowfullscreen loading="lazy">
         </iframe>
         <div class="caption">
-          <strong>HumBanayenge Spotlight</strong>
-          Young-Developer keynote at Google Cloud APAC
+          <strong>Hackathon Recap</strong>
+          Winner of Google Cloud Hackathon – LinkedIn post
         </div>
       </div>
     </div>
@@ -208,6 +212,17 @@ permalink: /media/
         Springer LNEE 992 – ICMEET 2023
       </div>
     </a>
+
+    <a class="paper-card" href="https://www.nlm.nih.gov/research/umls/implementation_resources/community/index.html" target="_blank" rel="noopener">
+      <img src="/assets/images/community-contr.png" alt="UMLS Community Contribution thumbnail" style="height:300px;">
+      <div class="paper-body" style="min-height:110px;">
+        <strong>UMLS Community Contribution</strong>
+        National Librabry of Medicine
+      </div>
+    </a>
   </div>
 
 </div>
+
+
+{% include easter-egg.html %}

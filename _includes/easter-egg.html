@@ -1,0 +1,95 @@
+<!-- ░░░  EASTER-EGG  ░░░ -->
+<!-- Floating spark icon -->
+<button id="egg" aria-label="How was this built?">✧</button>
+
+<!-- Hidden toast -->
+<div id="eggToast" role="status" aria-live="polite">
+  I have built this website from scratch with <strong>HTML + CSS + JavaScript</strong> &mdash; powered by
+  <strong>Ruby / Jekyll</strong> 🛠️
+</div>
+
+<!-- Tiny confetti container -->
+<canvas id="eggConfetti"></canvas>
+
+<style>
+/* ► trigger button */
+#egg{
+  position:fixed;bottom:26px;right:26px;
+  width:50px;height:50px;border:none;border-radius:50%;
+  background:var(--accent);color:#fff;font-size:1.6rem;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:10010;
+  box-shadow:0 4px 14px rgba(0,0,0,.25);
+  transition:transform .3s,background .3s;
+  animation:pulseEgg 3s ease-in-out infinite;
+}
+#egg:hover{background:#1565c0;transform:rotate(15deg);}
+@keyframes pulseEgg{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+
+/* ► toast */
+#eggToast{
+  position:fixed;bottom:96px;right:32px;max-width:260px;
+  background:#002d5c;color:#fff;font-size:.9rem;line-height:1.4;
+  padding:.75rem 1rem;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.35);
+  opacity:0;transform:translateY(20px);pointer-events:none;
+  transition:opacity .4s,transform .4s;
+  z-index:10009;
+}
+#eggToast.show{opacity:1;transform:translateY(0);}
+
+/* ► confetti canvas */
+#eggConfetti{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10008}
+</style>
+
+<script>
+(function(){
+  const egg=document.getElementById('egg'),
+        toast=document.getElementById('eggToast'),
+        canvas=document.getElementById('eggConfetti'),
+        ctx=canvas.getContext('2d'),
+        pieces=[]; // confetti particles
+
+  /* resize canvas */
+  function resize(){canvas.width=innerWidth;canvas.height=innerHeight}
+  addEventListener('resize',resize);resize();
+
+  /* create a confetti particle */
+  function addPiece(){
+    const colors=['#90caf9','#64b5f6','#1e88e5','#42a5f5'];
+    pieces.push({
+      x:Math.random()*canvas.width,
+      y:-20,
+      w:8,h:8,
+      vy:2+Math.random()*3,
+      vx:-2+Math.random()*4,
+      rot:0,vr:Math.random()*0.2-0.1,
+      col:colors[Math.floor(Math.random()*colors.length)]
+    });
+  }
+
+  /* draw / animate confetti */
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    pieces.forEach((p,i)=>{
+      p.x+=p.vx;p.y+=p.vy;p.rot+=p.vr;
+      ctx.save();
+      ctx.translate(p.x,p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle=p.col;
+      ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+      ctx.restore();
+      if(p.y>canvas.height+20) pieces.splice(i,1);
+    });
+    requestAnimationFrame(draw);
+  }draw();
+
+  /* on click: show toast & confetti */
+  egg.addEventListener('click',()=>{
+    toast.classList.add('show');
+    setTimeout(()=>toast.classList.remove('show'),4000);
+    // launch 40 pieces
+    for(let i=0;i<40;i++){setTimeout(addPiece,i*30);}
+  });
+})();
+</script>
+<!-- ░░░  END EASTER-EGG  ░░░ -->

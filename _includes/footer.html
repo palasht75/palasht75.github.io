@@ -1,0 +1,142 @@
+{% comment %}
+  _includes/footer.html
+  Full-width custom footer for Palash Thakur
+{% endcomment %}
+
+<style>
+/* ─── 1) BREAK THE THEME’S CENTERED WRAPPER ─── */
+/* Target the outer #footer div, its direct <footer>, and your .site-footer */
+#footer,
+#footer > footer,
+#footer > footer > .site-footer {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* ─── 2) VARIABLE FALLBACKS ─── */
+:root {
+  --accent: #1e88e5;
+  --grad1:  #e3f2fd;
+  --grad2:  #bbdefb;
+  --grad3:  #90caf9;
+  --grad4:  #64b5f6;
+  --grad5:  #42a5f5;
+}
+
+/* ─── 3) YOUR FOOTER STYLES ─── */
+.site-footer {
+  background: #002d5c;
+  color: #fff;
+  font-size: .9rem;
+  text-align: center;
+  overflow: hidden;
+}
+.site-footer .wave {
+  display: block;
+  width: 100vw;
+  height: 80px;
+  fill: var(--grad4);
+  transform: translateY(-1px);
+}
+.footer-inner {
+  padding: 2rem 1rem 3.5rem;
+}
+.social a {
+  margin: 0 .5rem;
+  font-size: 1.4rem;
+  color: #e0f2ff;
+  transition: transform .3s, color .3s;
+}
+.social a:hover {
+  color: #fff;
+  transform: translateY(-4px);
+}
+.copyright {
+  margin: 1rem 0 0;
+  opacity: .85;
+}
+.tech {
+  color: var(--grad2);
+  font-weight: 600;
+}
+#backTop {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  opacity: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  transition: opacity .4s, transform .3s;
+}
+#backTop.show {
+  opacity: 1;
+}
+#backTop:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width:600px) {
+  .social a { margin: 0 .3rem; }
+  #backTop { right:16px; bottom:16px; }
+}
+</style>
+
+<!-- ─── THE ACTUAL FOOTER MARKUP ─── -->
+<footer class="site-footer">
+  <!-- Decorative wave -->
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,50 C360,120 720,-20 1440,60 L1440 80 L0 80 Z"></path>
+  </svg>
+
+  <div class="footer-inner">
+    <div class="social">
+      <a href="https://linkedin.com/in/palash-thakur-8b5a34193" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/palasht75" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:palasht75@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="/feed.xml" aria-label="RSS"><i class="fas fa-rss"></i></a>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> Palash Thakur - crafted with
+      <span class="tech">HTML&nbsp;+&nbsp;CSS&nbsp;+&nbsp;JavaScript&nbsp;+&nbsp;Ruby/Jekyll</span>
+    </p>
+
+    <button id="backTop" aria-label="Back to top">↑</button>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // dynamic year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // back-to-top
+  const btn = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 400);
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // load Font Awesome if missing
+  if (!document.querySelector('link[href*="fontawesome"]')) {
+    const fa = document.createElement('link');
+    fa.rel = 'stylesheet';
+    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+    fa.crossOrigin = 'anonymous';
+    document.head.appendChild(fa);
+  }
+})();
+</script>

@@ -23,6 +23,7 @@ excerpt: >
   growing expertise in large-language-model pipelines.
 ---
 
+
 <style>
 :root {
   --accent: #1e88e5;
@@ -267,190 +268,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* EASTER EGG BUTTON */
-#egg {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  z-index: 9999;
-  background: var(--accent);
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity .6s, transform .6s;
-  animation: pulse 2s ease-in-out infinite;
-}
-#egg.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-@keyframes pulse {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-}
-.modal-content {
-  background: #fff;
-  color: #002d5c;
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  max-width: 300px;
-}
-.modal-content h3 {
-  margin-top: 0;
-}
-.close-btn {
-  margin-top: 1rem;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: .5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* responsive */
-@media(max-width:720px){
-  .about-me-container { flex-direction: column; text-align: center; }
-  .timeline { display: block; }
-  .timeline-item { width: 100%; margin-bottom: 1rem; }
-}
-
-/* ---- EASTER EGG TRIGGER ---- */
-#egg {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 56px; height: 56px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 1.5rem;
-  line-height: 56px;
-  text-align: center;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,.3);
-  cursor: pointer;
-  z-index: 10001;
-  animation: pulse 2s ease-in-out infinite;
-  transition: background .3s;
-}
-#egg:hover {
-  background: #1565c0;
-}
-@keyframes pulse {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-/* ---- SLIDING SIDE PANEL ---- */
-#easterPanel {
-  position: fixed;
-  top: 0; right: -320px;
-  width: 280px; height: 100%;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
-  box-shadow: -4px 0 16px rgba(0,0,0,.2);
-  transition: right .5s ease;
-  z-index: 10000;
-  display: flex;
-  flex-direction: column;
-}
-#easterPanel.open { right: 0; }
-
-/* Panel Header */
-.easter-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
-}
-.easter-header h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: var(--accent);
-}
-.easter-header button {
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  line-height: 1;
-  cursor: pointer;
-  color: #333;
-}
-
-/* Panel List */
-.easter-list {
-  list-style: none;
-  margin: 1rem;
-  padding: 0;
-  flex: 1;
-}
-.easter-list li {
-  margin: .6rem 0;
-  font-size: .95rem;
-  color: #333;
-  position: relative;
-  padding-left: 1.5rem;
-}
-.easter-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: .9rem;
-}
-
-/* Footer */
-.easter-footer {
-  padding: 1rem;
-  font-size: .85rem;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  color: #555;
-}
-
-/* CONFETTI */
-#confetti {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 10000;
-}
-.confetto {
-  position: absolute;
-  width: 8px; height: 8px;
-  background: var(--accent);
-  opacity: .9;
-  transform-origin: center;
-  animation: fall 2.5s linear forwards, spin 1s linear infinite;
-}
-@keyframes fall {
-  to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
 </style>
 
 <script>
@@ -505,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.background = firstPanel.__grad;
     firstPanel.classList.add('active');
   }
-  
+
   document.querySelectorAll('.panel').forEach(panel => {
     const sec = panel.dataset.section;
     panel.__grad = grades[sec]||grades.about;
@@ -545,20 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },{threshold:0.3}).observe(tag);
   });
 
-  // easter egg & modal
-  const egg = document.getElementById('egg'),
-        modal = document.getElementById('eggModal'),
-        close = document.getElementById('closeEgg');
-  setTimeout(() => egg.classList.add('show'), 2000);
-  egg.onclick = () => {
-    modal.style.display = 'flex';
-  };
-  close.onclick = () => {
-    modal.style.display = 'none';
-  };
-  modal.onclick = e => {
-    if(e.target===modal) modal.style.display = 'none';
-  };
 });
 </script>
 
@@ -670,28 +473,5 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </section>
 
-<!-- ================== EASTER EGG TRIGGER & PANEL ================== -->
-<!-- Floating “?” Trigger -->
-<!-- <div id="egg" role="button" aria-label="Surprise me!" title="Click for a surprise!">?</div> -->
 
-<!-- Sliding Side-Panel
-<aside id="easterPanel" aria-hidden="true">
-  <header class="easter-header">
-    <h3>🔧 Built With</h3>
-    <button id="closeEgg" aria-label="Close">×</button>
-  </header>
-  <ul class="easter-list">
-    <li>Jekyll</li>
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>JavaScript</li>
-    <li>IntersectionObserver API</li>
-  </ul>
-  <footer class="easter-footer">
-    Crafted by <strong>Palash Thakur</strong>
-  </footer>
-</aside>
-
-<!-- Confetti Container -->
-<!-- <div id="confetti"></div> -->
-
+{% include easter-egg.html %}

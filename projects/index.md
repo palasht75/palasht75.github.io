@@ -3,6 +3,11 @@ layout: splash
 title: "Projects"
 permalink: /projects/
 ---
+<style>
+:root{--grad1:#e3f2fd;}/* same colour */
+body{background:var(--grad1);}
+</style>
+
 
 <style>
 /* ===== PROJECT GRID ===== */
@@ -129,3 +134,4 @@ Click any card to view the repository or live demo.
 >
 > Thumbnails should be 1200×800 px (or similar 3:2 ratio) JPEG/PNG
 > stored in `/assets/images/`. -->
+{% include easter-egg.html %}
