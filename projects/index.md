@@ -101,15 +101,16 @@ Click any card to view the repository or live demo.
 </a>
 
 
-<!-- ========== PROJECT 3 ==========
-<a class="project-card" href="https://github.com/palasht75/llm-evidence-summarizer" target="_blank" rel="noopener">
-  <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LLM Evidence Summarizer">
+ <!-- ========== PROJECT 3 ========== -->
+<a class="project-card" href="https://github.com/palasht75/LeaseCheck-Multi-Shot-RAG" target="_blank" rel="noopener">
+  <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LeaseCheck-Multi Shot RAG">
   <div class="project-body">
-    <h3>LLM Evidence Summarizer</h3>
-    <p>Compliance-grade summarization with transparent sentence-level evidence mapping.</p>
+    <h3>LeaseCheck-Multi Shot RAG</h3>
+    <p>Detect illegal lease clauses in Canadian rentals using RAG, multi-shot prompting, and a minimal Python tool.
+</p>
 
     <div class="tech-tags">
-      <span>Python</span><span>OpenAI SDK</span><span>llama</span><span>GPT4o</span><span>Git CI/CD</span><span>Github Actions</span>
+      <span>Python</span><span>OpenAI SDK</span><span>GPT4o</span><span>FAISS</span><span>RAG</span><span>Prompt Engineering</span><span>Git CI/CD</span><span>Github Actions</span>
     </div>
   </div>
 </a>
