@@ -103,7 +103,7 @@ Click any card to view the repository or live demo.
 
  <!-- ========== PROJECT 3 ========== -->
 <a class="project-card" href="https://github.com/palasht75/LeaseCheck-Multi-Shot-RAG" target="_blank" rel="noopener">
-  <img class="project-thumb" src="/assets/images/llm-summarization.jpg" alt="LeaseCheck-Multi Shot RAG">
+  <img class="project-thumb" src="/assets/images/leasecheck.png" alt="LeaseCheck-Multi Shot RAG">
   <div class="project-body">
     <h3>LeaseCheck-Multi Shot RAG</h3>
     <p>Detect illegal lease clauses in Canadian rentals using RAG, multi-shot prompting, and a minimal Python tool.
