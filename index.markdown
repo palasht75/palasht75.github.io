@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <h2>Explore My Work</h2>
   <div class="card-grid">
     <a class="card" href="/projects/"><img src="/assets/images/projects.png" alt=""><div class="card-body"><h3>Projects</h3><p>Open-source & professional work.</p></div></a>
-    <a class="card" href="/media/"><img src="/assets/images/media.png" alt=""><div class="card-body"><h3>Talks & Demos</h3><p>YouTube & LinkedIn highlights.</p></div></a>
+    <a class="card" href="/media/"><img src="/assets/images/media.png" alt=""><div class="card-body"><h3>Talks & Publications</h3><p>YouTube & LinkedIn highlights.</p></div></a>
     <a class="card" href="/contact/"><img src="/assets/images/contact.png" alt=""><div class="card-body"><h3>Let's Connect</h3><p>Reach out to collaborate.</p></div></a>
   </div>
 </section>
