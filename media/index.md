@@ -217,7 +217,7 @@ body{background:var(--grad1);}
       <img src="/assets/images/community-contr.png" alt="UMLS Community Contribution thumbnail" style="height:300px;">
       <div class="paper-body" style="min-height:110px;">
         <strong>UMLS Community Contribution</strong>
-        National Librabry of Medicine
+        National Library of Medicine
       </div>
     </a>
   </div>
